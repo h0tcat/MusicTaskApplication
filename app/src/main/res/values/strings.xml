@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">OngakuTaskApplication</string>
+
+
+    <string-array name = "timeList">
+        <item>10分</item>
+        <item>30分</item>
+        <item>1時間</item>
+    </string-array>
+
+    <string-array name = "targetList">
+        <item>散歩</item>
+        <item>勉強に集中</item>
+        <item>ジョギング</item>
+    </string-array>
 </resources>
