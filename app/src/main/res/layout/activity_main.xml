@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/karinologo"
-        android:layout_width="99dp"
-        android:layout_height="108dp"
+        android:layout_width="104dp"
+        android:layout_height="114dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -21,35 +21,75 @@
 
     <Spinner
         android:id="@+id/targetSelectSpinner"
-        android:layout_width="309dp"
+        android:layout_width="298dp"
         android:layout_height="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="56dp"
+        android:entries="@array/targetList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/karinologo"
-        app:layout_constraintVertical_bias="0.106" />
-
-    <Spinner
-        android:id="@+id/targetSelectSpinner2"
-        android:layout_width="309dp"
-        android:layout_height="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/targetSelectSpinner"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="時間の設定"
-        android:textSize="28"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="21dp"
+        android:text="どれくらい流しますか？"
+        app:layout_constraintBottom_toTopOf="@+id/timeSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetSelectSpinner" />
+
+    <Spinner
+        android:id="@+id/timeSpinner"
+        android:layout_width="309dp"
+        android:layout_height="21dp"
+        android:entries="@array/timeList"
+        app:layout_constraintBottom_toTopOf="@+id/playMusicButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="目的は何ですか？"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/karinologo" />
+
+    <Button
+        android:id="@+id/playMusicButton"
+        android:layout_width="109dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="230dp"
+        android:text="はじめる"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/targetSelectSpinner2"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintTop_toBottomOf="@+id/timeSpinner" />
+
+    <Button
+        android:id="@+id/debugButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:onClick="oncli"
+        android:text="動作確認用のボタン"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playMusicButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
